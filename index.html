@@ -3,55 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting - mas0ng.com</title>
+<title>Game Gallery</title>
 <style>
   body {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f5f5f5;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px; /* Added padding to the top */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .redirect-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    background: -webkit-linear-gradient(left, #654ea3, #eaafc8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .game-card {
+    width: calc(20% - 20px);
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 
-  .redirect-message {
-    margin: 20px;
-    color: #654ea3;
+  .game-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #333;
   }
 
-  @media (max-width: 768px) {
-    .redirect-title {
-      font-size: 1.5em; /* Adjust for smaller screens */
-    }
+  .game-title {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 </style>
-<script>
-  function redirect() {
-    window.location.href = 'https://www.mas0ng.com/all%20games/catalog.html'; // Replace with the URL you want to redirect to
-  }
-
-  // Redirect after 5 seconds
-  setTimeout(redirect, 100);
-</script>
 </head>
 <body>
 
-<h1 class="redirect-title">mas0ng.com</h1>
-<p class="redirect-message">You are being redirected. Please wait...</p>
-<!-- Optional: include a manual link for users to click if they do not want to wait -->
-<p>If you are not redirected, <a href="https://www.mas0ng.com/all%20games/catalog.html" style="color: #553d67;">click here</a>.</p>
+<div class="container">
+  <div class="game-card">
+    <img class="game-img" src="game1.jpg" alt="Game 1">
+    <div class="game-title">Game 1</div>
+  </div>
+  <div class="game-card">
+    <img class="game-img" src="game2.jpg" alt="Game 2">
+    <div class="game-title">Game 2</div>
+  </div>
+  <div class="game-card">
+    <img class="game-img" src="game2.jpg" alt="Game 2">
+    <div class="game-title">Game 2</div>
+  </div>
+  <div class="game-card">
+    <img class="game-img" src="game2.jpg" alt="Game 2">
+    <div class="game-title">Game 2</div>
+  </div>
+  <div class="game-card">
+    <img class="game-img" src="game2.jpg" alt="Game 2">
+    <div class="game-title">Game 2</div>
+  </div>
+  <!-- Repeat for other game cards -->
+</div>
 
 </body>
 </html>
